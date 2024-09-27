@@ -7,18 +7,25 @@ public class Problem1 {
         ListNode curr1 = l1;
         ListNode curr2 = l2;
         ListNode head = null;
+        if(l1 == null){return l2;}
         while(curr1.next != null){
+            //if(curr1.next == null){break;}
             curr1 = curr1.next;
-            if(curr1.next == null){break;}
+            
             //System.out.println(curr1.val);
         }
-        while(curr2.next != null){
-            if(curr2.next == null){break;}
+        /*while(curr2 != null){
+            //if(curr2.next == null){break;}
             curr1.next = new ListNode(curr2.val);
             curr1 = curr1.next;
-            curr2 = curr2.next
+            curr2 = curr2.next;
+        }/* */
+        for(ListNode n = l2; n!=null; n=n.next){
+            
+            curr1.next = new ListNode(n.val);
+            curr1 = curr1.next;
         }
-        return null;
+        return l1;
 
         
         
